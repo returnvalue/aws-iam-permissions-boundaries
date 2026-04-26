@@ -29,8 +29,7 @@ The system implements a secure, three-tier governance model:
     ```bash
     terraform init
     terraform apply -auto-approve
-    
-```
+    ```
 
 ## Verification & Testing
 
@@ -40,8 +39,7 @@ To test the IAM governance and boundary enforcement:
     ```bash
     awslocal iam get-policy --policy-arn <YOUR_BOUNDARY_ARN>
     aws iam get-policy --policy-arn <YOUR_BOUNDARY_ARN>
-    
-```
+    ```
 
 2.  **Test Restricted Role Creation (Conceptual):**
     If you assume the \`junior-cloud-admin-role\`, attempting to create a role *without* the boundary will result in an \`AccessDenied\` error.
